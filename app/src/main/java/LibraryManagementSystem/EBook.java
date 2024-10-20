@@ -21,7 +21,7 @@ public class EBook extends Book implements Borrowable {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("ISBN: " + ISBN);
-        System.out.println("Genre: " + genre);
+        System.out.println("Genre: " + genre + " - " + genre.getDescription());
 
         System.out.println("Downloading Ebook from: " + downloadLink);
     }
