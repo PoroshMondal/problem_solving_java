@@ -1,13 +1,14 @@
 package LibraryManagementSystem;
 
+import LibraryManagementSystem.enums.Genre;
 import LibraryManagementSystem.interfaces.Borrowable;
 
 public class PhysicalBook extends Book implements Borrowable {
 
     private int pages;
     private boolean isBorrowed;
-    public PhysicalBook(String title, String author, String ISBN, int pages) {
-        super(title, author, ISBN);
+    public PhysicalBook(String title, String author, String ISBN, Genre genre, int pages) {
+        super(title, author, ISBN, genre);
         this.pages = pages;
         this.isBorrowed = false;
     }
@@ -17,6 +18,7 @@ public class PhysicalBook extends Book implements Borrowable {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("ISBN: " + ISBN);
+        System.out.println("Genre: " + genre);
         System.out.println("Pages: " + pages);
     }
 

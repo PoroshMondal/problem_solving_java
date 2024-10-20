@@ -1,5 +1,6 @@
 package LibraryManagementSystem;
 
+import LibraryManagementSystem.enums.Genre;
 import LibraryManagementSystem.interfaces.Borrowable;
 
 public class EBook extends Book implements Borrowable {
@@ -7,8 +8,8 @@ public class EBook extends Book implements Borrowable {
     private String downloadLink;
     private boolean isBorrowed;
 
-    public EBook(String title, String author, String ISBN, String downloadLink) {
-        super(title, author, ISBN);
+    public EBook(String title, String author, String ISBN, Genre genre, String downloadLink) {
+        super(title, author, ISBN, genre);
         this.downloadLink = downloadLink;
         this.isBorrowed = false;
     }
@@ -20,6 +21,7 @@ public class EBook extends Book implements Borrowable {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("ISBN: " + ISBN);
+        System.out.println("Genre: " + genre);
 
         System.out.println("Downloading Ebook from: " + downloadLink);
     }

@@ -4,6 +4,8 @@
  */
 package LibraryManagementSystem;
 
+import LibraryManagementSystem.enums.Genre;
+
 public class LibraryManagement {
 
     public static void main(String[] args) {
@@ -22,18 +24,21 @@ public class LibraryManagement {
                 "The Great Gatsby",
                 "F. Scott Fitzgerald",
                 "1234567890",
+                Genre.FICTION,
                 180);
 
         PhysicalBook physicalBook2 = new PhysicalBook(
                 "1984",
                 "George Orwell",
                 "0987654321",
+                Genre.BIOGRAPHY,
                 200);
 
         EBook eBook = new EBook(
                 "Database System Concepts",
                 "Shymor",
                 "0987654321",
+                Genre.COMPUTER_SCIENCE,
                 "https://www.micgrawhall.com");
 
         // Using methods on objects
@@ -42,7 +47,7 @@ public class LibraryManagement {
         physicalBook.borrow();  // Try borrowing the same book again
         physicalBook.returnBook();
 
-        System.out.println(); // Just a line break
+        System.out.println();
 
         physicalBook2.displayBookInfo();
         physicalBook2.borrow();
