@@ -8,7 +8,7 @@ public class LibraryManagement {
 
     public static void main(String[] args) {
         // Creating objects (instances) of the Book class
-        Book book1 = new Book(
+        /*Book book1 = new Book(
                 "The Great Gatsby",
                 "F. Scott Fitzgerald",
                 "1234567890");
@@ -16,7 +16,19 @@ public class LibraryManagement {
         Book book2 = new Book(
                 "1984",
                 "George Orwell",
-                "0987654321");
+                "0987654321");*/
+
+        PhysicalBook physicalBook = new PhysicalBook(
+                "The Great Gatsby",
+                "F. Scott Fitzgerald",
+                "1234567890",
+                180);
+
+        PhysicalBook physicalBook2 = new PhysicalBook(
+                "1984",
+                "George Orwell",
+                "0987654321",
+                200);
 
         EBook eBook = new EBook(
                 "Database System Concepts",
@@ -25,21 +37,21 @@ public class LibraryManagement {
                 "https://www.micgrawhall.com");
 
         // Using methods on objects
-        book1.displayBookInfo();
-        book1.borrow();
-        book1.borrow();  // Try borrowing the same book again
-        book1.returnBook();
+        physicalBook.displayBookInfo();
+        physicalBook.borrow();
+        physicalBook.borrow();  // Try borrowing the same book again
+        physicalBook.returnBook();
 
         System.out.println(); // Just a line break
 
-        book2.displayBookInfo();
-        book2.borrow();
-        book2.returnBook();
+        physicalBook2.displayBookInfo();
+        physicalBook2.borrow();
+        physicalBook2.returnBook();
 
         System.out.println();
         eBook.displayBookInfo();
         eBook.borrow();
-        eBook.borrow();
+        eBook.returnBook();
 
     }
 }
