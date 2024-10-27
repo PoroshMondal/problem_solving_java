@@ -58,5 +58,27 @@ public class LibraryManagement {
         eBook.borrow();
         eBook.returnBook();
 
+        // Members operations
+        Library libraryOP = new Library();
+        libraryOP.addMember("M001","Alice");
+        libraryOP.addMember("M002","Bob");
+
+        Member alice = libraryOP.findMemberById("M001");
+        if (alice!=null) {
+            alice.borrowBook(physicalBook);
+            alice.borrowBook(eBook);
+            alice.listBorrowedBooks();
+            alice.returnBook(physicalBook);
+            alice.listBorrowedBooks();
+        }
+
+        Member bob = libraryOP.findMemberById("M002");
+        if (bob!=null) {
+            bob.borrowBook(physicalBook);
+            bob.listBorrowedBooks();
+            bob.returnBook(physicalBook);
+            bob.listBorrowedBooks();
+        }
+
     }
 }
